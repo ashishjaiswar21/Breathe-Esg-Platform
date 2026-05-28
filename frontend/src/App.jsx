@@ -7,10 +7,10 @@ function App() {
   const [statusMsg, setStatusMsg] = useState({ text: '', type: '' });
   const [records, setRecords] = useState([]);
 
-  // 1. DYNAMIC FETCH: Pulls real data from your PostgreSQL Database!
+  // 1. DYNAMIC FETCH: Pulls real data from your live PostgreSQL Database on Render!
   const fetchRecords = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/records/');
+      const response = await axios.get('https://breathe-esg-backend-j2jh.onrender.com/api/records/');
       setRecords(response.data);
     } catch (err) {
       console.error("Failed to fetch records:", err);
@@ -36,7 +36,7 @@ function App() {
     setStatusMsg({ text: '⚙️ Parsing CSV & Normalizing Data...', type: 'loading' });
     
     try {
-      await axios.post('http://127.0.0.1:8000/api/upload/sap/', formData, {
+      await axios.post('https://breathe-esg-backend-j2jh.onrender.com/api/upload/sap/', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setStatusMsg({ text: '✅ SAP Data successfully ingested to PostgreSQL!', type: 'success' });
@@ -51,7 +51,7 @@ function App() {
     setIsProcessing(true);
     setStatusMsg({ text: '📡 Fetching live data from Travel API...', type: 'loading' });
     try {
-      await axios.get('http://127.0.0.1:8000/api/sync/travel/');
+      await axios.get('https://breathe-esg-backend-j2jh.onrender.com/api/sync/travel/');
       setStatusMsg({ text: '✅ Travel Data pulled and processed!', type: 'success' });
       fetchRecords(); // Refresh the table automatically!
     } catch (err) {
