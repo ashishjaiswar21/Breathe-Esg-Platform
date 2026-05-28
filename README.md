@@ -1,8 +1,7 @@
 # ✦ Breathe ESG - Enterprise Data Ingestion Engine
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Project-blue?style=for-the-badge)](INSERT_YOUR_LIVE_LINK_HERE)
-[![GitHub](https://img.shields.io/badge/GitHub-View_Source-black?style=for-the-badge)](INSERT_YOUR_GITHUB_LINK_HERE)
-
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Project-blue?style=for-the-badge)](https://breathe-esg-platform-rose.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-View_Source-black?style=for-the-badge)](https://github.com/ashishjaiswar21/Breathe-Esg-Platform)
 > 🚀 A full-stack enterprise ESG data ingestion and normalization platform built for the Breathe ESG technical assessment.
 
 This platform ingests messy enterprise data from multiple external systems like SAP exports and corporate travel APIs, validates and normalizes the data using custom Python business logic, and provides analysts with a secure dashboard to review, approve, and audit records before they become audit-ready.
