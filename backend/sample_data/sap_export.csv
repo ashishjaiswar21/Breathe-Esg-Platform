@@ -1,0 +1,5 @@
+Anlagen-Code,Brennstoff,Menge,Einheit,Datum
+PL101,Diesel,500,Litre,13.01.2026
+PL102,Petrol,-50,L,14/01/2026
+PL101,Diesel,1000000,liters,15.01.2026
+PL103,Natural Gas,,m3,16.01.2026
